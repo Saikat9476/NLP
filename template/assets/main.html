@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link type="image/x-icon" src="assets/images/favicon.ico" rel="shortcut icon">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script> -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+<!--  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="assets/js/main1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	
+ 
+
+    <!--Charts-->
+	
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.js"></script> 
+    <!--End of Charts-->
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link href="assets/css/main_copy.css" rel="stylesheet">
+    <!-- <link href="assets/css/datetimepicker.css" rel="stylesheet"> -->
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+ <div id="header" class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <i class="icon-reorder"></i>
+        </button>
+            <a class="navbar-brand mainNav" href="#">
+            <img src="assets/images/UPRAIZAL.png" id="upraizal">
+        </a>
+        </div>
+        <nav class="collapse navbar-collapse">
+		  <ul class="nav navbar-nav">
+                <!-- <li>
+                <a href="#">nav</a>
+            </li>-->
+                <!-- <li>
+                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i>
+</a>
+            </li> -->
+                <li>
+                    <a href="#">
+                        <div class="input-group src">
+                            <input type="text" class="form-control" placeholder="search" />
+                            <span class="input-group-btn">
+                        <button class="btn btn-info" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li class="dropdown">
+                    <a href="#" id="nbAcctDD" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i><img src="assets/images/favicon.ico" id="upraizal" class="img-circle" alt="UPRAIZAL" style="width:40px;height:40px;"> UPRAIZAL<i class="icon-sort-down"></i></a>
+                    <ul class="dropdown-menu pull-right">
+                        <div class="row" style="margin-bottom:15px;">
+                            <div class="col-sm-3">
+                                <a class="navbar-brand mainNav" href="#">
+								<img src="assets/images/favicon.ico" id="upraizalfavicon" class="img-circle" alt="UPRAIZAL" style="width:40px;height:40px;">
+           <!--  <img src="https://keenthemes.com/metronic/themes/themes/metronic/dist/preview//assets/app/media/img/users/user4.jpg" class="img-circle" alt="Cinque Terre" width="40" height="40"> -->
+        </a>
+                            </div>
+                            <div class="col-sm-9">
+                                <li class="hdr">
+                                    <a class="navbar-brand mainNav" href="#">
+                                        <h6>Upraizal<br>upraizal@upraizal</h6>
+                                    </a>
+                                </li>
+                            </div>
+
+                        </div>
+                        <li>
+                            <a href="#">
+                                <h5>My Profile</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h5>Activity</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h5>FAQ</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h5>Logout</h5>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </nav>
+    </div>
+    <div id="wrapper" class="container-fluid">
+        <div class="row bdy">
+            <div id="sidebar-wrapper" class="col-xs-1">
+                <div id="sidebar">
+                    <ul class="nav list-group">
+                        <li>
+                            <a class="list-group-item" href="main - Copy.html"><i class="fa fa-line-chart"></i><br>Sidebar</a>
+                        </li>
+                        <li>
+                            <a class="active trngl" href="">
+                                <!-- <span class="menu_item-here"></span> -->
+                                <i class="fa fa-lightbulb-o" aria-hidden="true"></i><br> NLP
+                            </a>
+                        </li>
+                        <li>
+                            <a class="list-group-item" href=""><i class="fa fa-users" aria-hidden="true"></i><br>
+                                                  Users</a>
+                        </li>
+                        <li>
+                            <a class="list-group-item" href=""><i class="fa fa-bell-o" aria-hidden="true"></i><br>
+
+                                  Sidebar Item</a>
+                        </li>
+                        <li>
+                            <a class="list-group-item" href=""><i class="fa fa-cog" aria-hidden="true"></i> <br>Sidebar Item</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main-wrapper" class="col-xs-11 pull-right">
+                <!-- <div id="main"></div> -->
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <ul class="nav nav-pills navpills">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#1a" data-toggle="tab" aria-selected="true">All Conversations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#2a" data-toggle="tab" aria-selected="false">Employee Tone Scorecard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link thirdLink" href="#3a" data-toggle="tab" aria-selected="false">Organization Scorecard</a>
+                            </li>
+
+                        </ul>
+
+                        <!--  <div class="nav-border">
+                        </div> -->
+
+                    </div>
+                </div>
+				<div class="row">
+                    <div class="col-xs-12">
+                        <div class="tab-content clearfix">
+                            <div class="tab-pane active" id="1a">
+                                <div class="card" style="margin-top:14px;">
+
+                                    <div class="card-block well">
+
+                                        <div class="box " style="">
+                                            <div class="row">
+                                                <div class="col-xs-4">
+                                                </div>
+
+                                                <div class="col-xs-3">
+												<div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+												 
+                                                        <i class="fa fa-calendar"></i>&nbsp;
+                                                        <span></span><i class="fa fa-caret-down"></i>
+														
+                                                    </div>
+                                                    <!-- <div class="filtersmaindiv">
+								<div id="reportrange1" class="rangedp">
+									<i class="fa fa-calendar"></i>&nbsp; <span></span> <i
+										class="fa fa-caret-down"></i>
+								</div>
+							</div> -->
+                                                </div>
+
+                                                <div class="col-xs-2">
+												<div class="FilterStatus">
+                                                        <select class="form-control selectme inputstyle" title="Select Status" tabindex="-1" aria-hidden="true" data-live-search="true" id="filterStatus">
+									<option value="-1" selected="selected">All</option>
+									<option value="${status.index}">Positive</option>
+        							<option value="${status.index}">Negative</option>
+        						</select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-3">
+                                                </div>
+                                            </div>
+                                            <table id="example1" class="table table-striped table-bordered" style="width:100%">
+                                                 <thead>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Name</th>
+                                                        <th>Position</th>
+                                                        <th>Comment Type</th>
+                                                        <!-- <th>Text1</th> -->
+                                                        <!-- <th>Text2</th>                                                         -->
+                                                        <th>Sentiment</th>
+                                                        <th>Tone</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>2018/04/25</td>
+                                                        <td>Tiger</td>
+                                                        <td>System Architect</td>
+                                                        <td>Yeah I know  Things would be so much easier that way. I'm bored the boys are playing tekenen (I can't spell it)</td>
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>                                                         -->
+                                                        <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                        <td>Happy</td>
+													</tr>
+                                                    <tr>
+                                                        <td>2018/04/25</td>
+                                                        <td>John</td>
+                                                        <td>System Engineer</td>
+                                                        <td>I tried to dye my hair and all i got was a blond chunk in the front middle part of my hair. Dang.
+</td>
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                         <td><button class="btn btn-danger btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Negative</button></td>
+                                                        <td>Anger</td>
+													</tr>
+                                                    <tr>
+                                                        <td>2018/05/25</td>
+                                                        <td>Nixon</td>
+                                                        <td>Software Engineer</td>
+                                                        <td>Layin n bed with a headache  ughhhh...waitin on your call...</td>
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <td><button class="btn btn-primary btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td>
+                                                        <td>Sad</td>
+													 </tr>
+                                                    <tr>
+                                                        <td>2018/04/25</td>
+                                                        <td>Mary</td>
+                                                         <td>Software Engineer</td>
+                                                        <td>IE8 nearing 6% according to my stats. FF 3.0.10 adoption rate amazes me</td>
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                        <td>Surprise</td>
+														
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2018/04/25</td>
+                                                        <td>Paul </td>
+                                                         <td>Software Engineer</td>
+                                                        <td>Hmmm. http://www.djhero.com/ is down</td>
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                         <td><button class="btn btn-danger btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Negative</button></td>
+                                                        <td>Worry</td>
+													</tr>
+                                                    <tr>
+                                                        <td>2018/04/25</td>
+                                                        <td>Rohan</td>
+                                                        <td>Team Lead</td>
+                                                        <td>Funeral ceremony...gloomy friday...</td>
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <td><button class="btn btn-primary btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td>
+                                                        <td>Sad</td>
+													</tr>
+                                                    <tr>
+                                                        <td>2018/04/25</td>
+                                                        <td>Dev</td>
+                                                        <td>System Programmer</td>
+                                                        <td>In my lifetime, we've made huge strides, but there's a lot more to learn.</td>
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <td><button class="btn btn-danger btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Negative</button></td>
+                                                        <td>Sarcastic</td>
+													</tr>
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Joe</td> -->
+                                                        <!-- <td>Senior Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-primary btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td> -->
+                                                        <!-- <td>Sad</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Stephen</td> -->
+                                                        <!-- <td>System Programmer</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td> -->
+                                                        <!-- <td>Happy</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Ali</td> -->
+                                                        <!-- <td>Software Engineer</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-primary btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td> -->
+                                                        <!-- <td>Sad</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td> -->
+                                                        <!-- <td>Happy</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td> -->
+                                                        <!-- <td>Happy</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td> -->
+                                                        <!-- <td>Happy</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-danger btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Negative</button></td> -->
+                                                        <!-- <td>Anger</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-primary btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td> -->
+                                                        <!-- <td>Sad</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td> -->
+                                                        <!-- <td>Sad</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td> -->
+                                                        <!-- <td>Happy</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td> -->
+                                                        <!-- <td>Happy</td> -->
+                                                    <!-- </tr> -->
+                                                    
+                                                </tbody>
+                                                <tfoot>
+                                                    <!-- <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr> -->
+                                                </tfoot>
+                                            </table>
+                                      
+									   </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                            <div class="tab-pane" id="2a">
+                                <div class="card" style="margin-top:14px;">
+
+                                    <div class="card-block well">
+
+                                        <div class="box " style="">
+                                            <div class="row">
+                                                <div class="col-xs-4">
+                                                </div>
+
+                                                <div class="col-xs-3">
+                                                    <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                                                        <i class="fa fa-calendar"></i>&nbsp;
+                                                        <span></span> <i class="fa fa-caret-down"></i>
+                                                    </div>
+                                                    <!-- <div class="filtersmaindiv">
+								<div id="reportrange1" class="rangedp">
+									<i class="fa fa-calendar"></i>&nbsp; <span></span> <i
+										class="fa fa-caret-down"></i>
+								</div>
+							</div> -->
+                                                </div>
+
+                                                <div class="col-xs-2">
+                                                    <div class="FilterStatus">
+                                                        <select class="form-control selectme inputstyle" title="Select Status" tabindex="-1" aria-hidden="true" data-live-search="true" id="filterStatus">
+									<option value="-1" selected="selected">All</option>
+									<option value="${status.index}">Positive</option>
+        							<option value="${status.index}">Negative</option>
+        						</select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-3">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <table id="example2" class="table table-striped table-bordered" style="width:100%">
+                                                       <!--  <thead>
+                                                            <tr>
+                                                                <th>Date</th>
+                                                                <th>Name</th>
+                                                                <th>Comment</th>
+                                                                <th>Comment Type</th>
+                                                                <th>Text1</th>
+                                                                <th>Text2</th>
+                                                                <th>Reply To</th>
+                                                                <th>Sentiment</th>
+                                                                <th>Tone</th>
+                                                                <th>More</th>
+                                                            </tr>
+                                                        </thead> -->
+                                                       <!--  <tbody> -->
+                                                            <!-- <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                        <td>....</td>
+                                                        <td>....</td>   
+                                                        <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                        <td>....</td>
+                                                        <td>....</td>   
+                                                        <td>....</td>
+                                                                <td><button class="btn btn-danger btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Negative</button></td>
+                                                                <td>Angry</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/05/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                        <td>....</td>
+                                                        <td>....</td>   
+                                                        <td>....</td>
+                                                                <td><button class="btn btn-primary btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td>
+                                                                <td>Sad</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                        <td>....</td>
+                                                        <td>....</td>   
+                                                        <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                        <td>....</td>
+                                                        <td>....</td>   
+                                                        <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Love</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                        <td>....</td>
+                                                        <td>....</td>   
+                                                        <td>....</td>
+                                                                <td><button class="btn btn-danger btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Negative</button></td>
+                                                                <td>Sad</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-danger btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Negative</button></td>
+                                                                <td>Hate</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-danger btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Negative</button></td>
+                                                                <td>Anger</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-primary btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td>
+                                                                <td>Sad</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-primary btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td>
+                                                                <td>Sad</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-danger btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Negative</button></td>
+                                                                <td>Hate</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2018/04/25</td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                <td>....</td>
+                                                                 <td>....</td>
+                                                                 <td>....</td>   
+                                                                 <td>....</td>
+                                                                <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                                <td>Happy</td>
+                                                                <td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                            </tr> -->
+															<thead>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Name</th>
+                                                        <th>Position</th>
+                                                        <th>Comment Type</th>
+                                                        <!-- <th>Text1</th> -->
+                                                        <!-- <th>Text2</th>                                                         -->
+                                                       <th>Sentiment</th>
+                                                        <th>Tone</th>
+														<th>More</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>2018/04/25</td>
+                                                        <td>Tiger</td>
+                                                        <td>System Architect</td>
+                                                        <td>Yeah I know  Things would be so much easier that way. I'm bored the boys are playing tekenen (I can't spell it)</td>
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>                                                         -->
+                                                        <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                        <td>Happy</td>
+														<td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2018/04/25</td>
+                                                        <td>John</td>
+                                                        <td>System Engineer</td>
+                                                        <td>I tried to dye my hair and all i got was a blond chunk in the front middle part of my hair. Dang.
+</td>
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                         <td><button class="btn btn-danger btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Negative</button></td>
+                                                        <td>Anger</td>
+														<td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2018/05/25</td>
+                                                        <td>Nixon</td>
+                                                        <td>Software Engineer</td>
+                                                        <td>Layin n bed with a headache  ughhhh...waitin on your call...</td>
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <td><button class="btn btn-primary btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td>
+                                                        <td>Sad</td>
+														<td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2018/04/25</td>
+                                                        <td>Mary</td>
+                                                         <td>Software Engineer</td>
+                                                        <td>IE8 nearing 6% according to my stats. FF 3.0.10 adoption rate amazes me</td>
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td>
+                                                        <td>Surprise</td>
+														<td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2018/04/25</td>
+                                                        <td>Paul </td>
+                                                         <td>Software Engineer</td>
+                                                        <td>Hmmm. http://www.djhero.com/ is down</td>
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                         <td><button class="btn btn-danger btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Negative</button></td>
+                                                        <td>Worry</td>
+														<td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2018/04/25</td>
+                                                        <td>Rohan</td>
+                                                        <td>Team Lead</td>
+                                                        <td>Funeral ceremony...gloomy friday...</td>
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <td><button class="btn btn-primary btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td>
+                                                        <td>Sad</td>
+														<td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2018/04/25</td>
+                                                        <td>Dev</td>
+                                                        <td>System Programmer</td>
+                                                        <td>In my lifetime, we've made huge strides, but there's a lot more to learn.</td>
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <td><button class="btn btn-danger btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Negative</button></td>
+                                                        <td>Sarcastic</td>
+														<td><i class="fa fa-ellipsis-h" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Joe</td> -->
+                                                        <!-- <td>Senior Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-primary btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td> -->
+                                                        <!-- <td>Sad</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Stephen</td> -->
+                                                        <!-- <td>System Programmer</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td> -->
+                                                        <!-- <td>Happy</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Ali</td> -->
+                                                        <!-- <td>Software Engineer</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-primary btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td> -->
+                                                        <!-- <td>Sad</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td> -->
+                                                        <!-- <td>Happy</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td> -->
+                                                        <!-- <td>Happy</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td> -->
+                                                        <!-- <td>Happy</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-danger btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Negative</button></td> -->
+                                                        <!-- <td>Anger</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-primary btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td> -->
+                                                        <!-- <td>Sad</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Neutral</button></td> -->
+                                                        <!-- <td>Sad</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td> -->
+                                                        <!-- <td>Happy</td> -->
+                                                    <!-- </tr> -->
+                                                    <!-- <tr> -->
+                                                        <!-- <td>2018/04/25</td> -->
+                                                        <!-- <td>Tiger Nixon</td> -->
+                                                        <!-- <td>System Architect</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td> -->
+                                                        <!-- <td>....</td>    -->
+                                                        <!-- <td><button class="btn btn-success btn-xs" data-title="Positive" data-toggle="modal" data-target="#edit">Positive</button></td> -->
+                                                        <!-- <td>Happy</td> -->
+                                                    <!-- </tr> -->
+                                                    
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <!-- <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr> -->
+                                                        </tfoot>
+                                                    </table>
+                                                    <!--Popup-->
+                                                    <div id="testmodal" class="modal fade">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                    <h4 class="modal-title">Profile</h4>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-3">
+                                                                             <div class="card" style="">
+
+                                                                                <div class="card-block well">
+
+                                                                                    <div class="box " style="">
+                                                                            <div class="profile_img">
+                                                                                <img src="assets/images/profile_img.png" alt="profile_img">
+                                                                          
+                                                                            </div>
+                                                                            </div>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xs-9">
+                                                                            <!-- 	<div class="card">
+  <img class="card-img-top" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Profile</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> -->
+                                                                            <div class="card" style="">
+
+                                                                                <div class="card-block well">
+
+                                                                                    <div class="box " style="">
+                                                                                        <div class="row">
+                                                                                            <div class="col-xs-12">
+
+
+                                                                                                <div class="panel panel-info">
+                                                                                                    <div class="panel-heading">
+                                                                                                        <h3 class="panel-title">Tiger</h3>
+                                                                                                    </div>
+                                                                                                    <div class="panel-body">
+                                                                                                        <div class="row">
+                                                                                                            <div class=" col-xs-12">
+                                                                                                                <table class="table table-user-information">
+                                                                                                                    <tbody>
+																													<tr>
+                                                                                                                            <td>Department:</td>
+                                                                                                                            <td>Programming</td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                          <tr>
+                                                                                                                                <td>Email</td>
+                                                                                                                                <td><a href="#">info@support.com</a></td>
+                                                                                                                            </tr>
+																															<tr>
+                                                                                                                            <td>Position:</td>
+                                                                                                                            <td>System Architect</td>
+                                                                                                                        </tr>
+                                                                                                                           </tr>
+
+                                                                                                                    </tbody>
+                                                                                                                </table>
+
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+
+
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-xs-6">
+																		<div class="card" style="">
+<!-- <div class="img" style="background:gray;"><img class="card-img-top" src="..." alt="Tone" style="text-align:center;"></div> -->
+                                                                                <div class="card-block well">
+				   <div class="box " style="">
+                                                                           																 <div class="panel-group">
+            <div class="panel panel-info">
+                <div class="panel-heading form_heading">
+                    <h3 class="panel-title" style="text-align:center;">Sentiment</h3>
+					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                </div>
+                <div class="panel-body">
+                    <canvas id="donut1"></canvas>
+                </div>
+                <div class="panel-footer">
+                    
+                </div>
+            </div>
+        </div>
+                                                                        </div>
+                                                                            
+                                                                        </div>
+                                                                        </div>
+                                                                        </div>
+                                                                        <div class="col-xs-6">
+																		<div class="card" style="">
+
+                                                                                <div class="card-block well">
+
+                                                                                    <div class="box " style="">
+                                                                           																 <div class="panel-group">
+            <div class="panel panel-info">
+                <div class="panel-heading form_heading">
+                    <h3 class="panel-title" style="text-align:center;">Tone</h3>
+					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                </div>
+                <div class="panel-body">
+                    <canvas id="donut2"></canvas>
+                </div>
+                <div class="panel-footer">
+                    
+                </div>
+            </div>
+        </div>
+                                                                        </div>
+                                                                        </div>
+                                                                        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--  <p>Do you want to save changes you made to document before closing?</p>
+                <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p> -->
+                                                              
+															   </div>
+                                                                <!-- <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                                </div> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--end of popup-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="3a">
+							<div class="row" style="margin-top: 8px;">
+                                     <div class="col-xs-7">
+									</div> 
+                                    <div class="col-xs-3">
+                                                    <div id="reportrange2" style="background: #fff; cursor: pointer; padding: 0px 4px; border: 1px solid #ccc; width: 100%;height: 36px;">
+                                                        <i class="fa fa-calendar"></i>&nbsp;
+                                                        <span></span><i class="fa fa-caret-down"></i>
+                                                    </div>
+                                                 </div>
+
+                                                <div class="col-xs-2">
+                                                    <div class="FilterStatus">
+                                                        <select class="form-control selectme inputstyle" title="Select Status" tabindex="-1" aria-hidden="true" data-live-search="true" id="filterStatus2">
+									<option value="-1" selected="selected">All</option>
+									<option value="${status.index}">Positive</option>
+        							<option value="${status.index}">Negative</option>
+        						</select>
+                                                    </div>
+                                                </div>
+                                    </div>
+									<div class="card" style="margin-top:14px;">
+
+                                            <div class="card-block well">
+
+                                                <div class="box ">
+                                                   
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="panel-group">
+            <div class="panel panel-info">
+                <div class="panel-heading form_heading">
+                    <h3 class="panel-title" style="text-align:center;">Sentiment</h3>
+					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                </div>
+                <div class="panel-body">
+                    <canvas id="donut3"></canvas>
+                </div>
+             </div>
+        </div>
+                                               
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="panel-group">
+            <div class="panel panel-info">
+                <div class="panel-heading form_heading">
+                    <h3 class="panel-title" style="text-align:center;">Tone</h3>
+					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                </div>
+                <div class="panel-body">
+                    <canvas id="donut4"></canvas>
+                </div>
+              </div>
+        </div> 
+                                              
+                                    </div>
+
+                                </div>
+								<br>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                       <!-- <svg id="chart1" style="height:300px;"></svg> -->
+													<div class="panel-group">
+            <div class="panel panel-info">
+                <div class="panel-heading form_heading">
+                    <h3 class="panel-title" style="text-align:center;">Sentiment</h3>
+					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                </div>
+                <div class="panel-body">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+                                              
+                                    </div>
+                                    <div class="col-xs-6">
+                                     <div class="panel-group">
+            <div class="panel panel-info">
+                <div class="panel-heading form_heading">
+                    <h3 class="panel-title" style="text-align:center;">Tone</h3>
+					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                </div>
+                <div class="panel-body">
+                    <canvas id="myChart1"></canvas>
+                </div>
+               
+            </div>
+        </div>
+                                             
+                                    </div>
+
+                                </div>
+								
+                            </div>
+    </div>
+
+                                </div>
+								
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <script>
+ $(document).ready(function(){
+var ctx = document.getElementById("myChart").getContext("2d");
+
+const colors = {
+  green: {
+    fill: '#e0eadf',
+    stroke: '#5eb84d',
+  },
+  lightBlue: {
+    stroke: '#6fccdd',
+  },
+  darkBlue: {
+    fill: '#92bed2',
+    stroke: '#3282bf',
+  },
+  purple: {
+    fill: '#8fa8c8',
+    stroke: '#75539e',
+  },
+};
+
+const positive = [26, 36, 42, 38, 40, 30, 12];
+const Negative = [34, 44, 33, 24, 25, 28, 25];
+const neutral = [16, 13, 25, 33, 40, 33, 45];
+const xData = [13, 14, 15, 16, 17, 18, 19];
+
+const myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: xData,
+    datasets: [{
+      label: "Positive",
+      fill: true,
+      backgroundColor: colors.purple.fill,
+      pointBackgroundColor: colors.purple.stroke,
+      borderColor: colors.purple.stroke,
+      pointHighlightStroke: colors.purple.stroke,
+      borderCapStyle: 'butt',
+      data: positive,
+
+    }, {
+      label: "Negative",
+      fill: true,
+      backgroundColor: colors.darkBlue.fill,
+      pointBackgroundColor: colors.darkBlue.stroke,
+      borderColor: colors.darkBlue.stroke,
+      pointHighlightStroke: colors.darkBlue.stroke,
+      borderCapStyle: 'butt',
+      data: Negative,
+    }, {
+      label: "Neutral",
+      fill: true,
+      backgroundColor: colors.green.fill,
+      pointBackgroundColor: colors.lightBlue.stroke,
+      borderColor: colors.lightBlue.stroke,
+      pointHighlightStroke: colors.lightBlue.stroke,
+      borderCapStyle: 'butt',
+      data: neutral,
+    }]
+  },
+  options: {
+    responsive: true,
+    // Can't just just `stacked: true` like the docs say
+    scales: {
+      yAxes: [{
+        stacked: true,
+      }]
+    },
+    animation: {
+      duration: 750,
+    },
+  }
+});
+ });
+  </script>
+  <script>
+ $(document).ready(function(){
+var ctx1 = document.getElementById("myChart1").getContext("2d");
+
+const colors = {
+  green: {
+    fill: '#e0eadf',
+    stroke: '#5eb84d',
+  },
+  lightBlue: {
+    stroke: '#6fccdd',
+  },
+  darkBlue: {
+    fill: '#92bed2',
+    stroke: '#3282bf',
+  },
+  purple: {
+    fill: '#8fa8c8',
+    stroke: '#75539e',
+  },
+};
+
+			
+const Happy = [26, 36, 42, 38, 40, 30, 12];
+const Sad = [34, 44, 33, 24, 25, 28, 25];
+const Love = [16, 13, 25, 33, 40, 33, 45];
+const Hate = [5, 9, 10, 9, 18, 19, 20];
+const xData = [13, 14, 15, 16, 17, 18, 19];
+
+const myChart1 = new Chart(ctx1, {
+  type: 'line',
+  data: {
+    labels: xData,
+    datasets: [{
+      label: "Hate",
+      fill: true,
+      backgroundColor: colors.purple.fill,
+      pointBackgroundColor: colors.purple.stroke,
+      borderColor: colors.purple.stroke,
+      pointHighlightStroke: colors.purple.stroke,
+      borderCapStyle: 'butt',
+      data: Hate,
+
+    }, {
+      label: "Love",
+      fill: true,
+      backgroundColor: colors.darkBlue.fill,
+      pointBackgroundColor: colors.darkBlue.stroke,
+      borderColor: colors.darkBlue.stroke,
+      pointHighlightStroke: colors.darkBlue.stroke,
+      borderCapStyle: 'butt',
+      data: Love,
+    }, {
+      label: "Sad",
+      fill: true,
+      backgroundColor: colors.green.fill,
+      pointBackgroundColor: colors.lightBlue.stroke,
+      borderColor: colors.lightBlue.stroke,
+      pointHighlightStroke: colors.lightBlue.stroke,
+      borderCapStyle: 'butt',
+      data: Sad,
+    }, {
+      label: "Happy",
+      fill: true,
+      backgroundColor: colors.green.fill,
+      pointBackgroundColor: colors.green.stroke,
+      borderColor: colors.green.stroke,
+      pointHighlightStroke: colors.green.stroke,
+      data: Happy,
+    }]
+  },
+  options: {
+    responsive: true,
+	 legend: {
+      display: true,
+	<!-- position: 'right', -->
+	},
+    // Can't just just `stacked: true` like the docs say
+    scales: {
+      yAxes: [{
+        stacked: true,
+      }]
+    },
+    animation: {
+      duration: 750,
+    },
+  }
+});
+ });
+  </script>
+</body>
+
+</html>
